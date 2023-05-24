@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .chess-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .board-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0.75rem solid hsl(235, 19%, 25%);
+    width: 450px;
+    height: 450px;
+    border-radius:25px;
+    background-color: hsl(235, 19%, 25%);
+  }
+  
+  .board {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .board .square:nth-child(1) .board-square{ border-radius: 20px 0 0 0;}
+  .board .square:nth-child(8) .board-square{ border-radius: 0 20px 0 0;}
+  .board .square:nth-child(64) .board-square{ border-radius: 0 0 20px 0;}
+  .board .square:nth-child(57) .board-square{ border-radius: 0 0 0 20px;}
+  
+  .square {
+    width: 12.5%;
+    height: 12.5%;
+  }
+  
+  .square-black{
+    background: black;
+  }
+  
+  .square-white{
+    background: white;
+  }
+  
+  .board-square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .piece-container{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .piece{
+    cursor: pointer;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .highlight {
+    background-color: palevioletred;
+  }
+  
+  .highlight-dot {
+    border: white 4px solid;
+    background-color: rgb(53, 65, 79);
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+  }
+  
+  .promote-square {
+    width: 50%;
+    height: 50%;
+  }
